@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on darwin)" generated="2026-02-05T00:04:10.414840" rpa="false" schemaversion="5">
+<suite id="s1" name="Lab8" source="/Users/ginny/lab8/test/lab8.robot">
+<test id="s1-t1" name="Open computing Website" line="16">
+<kw name="Open Computing Headless">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T00:04:10.572481" level="INFO">${opts} = &lt;selenium.webdriver.chrome.options.Options object at 0x104835d30&gt;</msg>
+<var>${opts}</var>
+<arg>__import__('selenium.webdriver').webdriver.ChromeOptions()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.571970" elapsed="0.000546"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opts}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.572620" elapsed="0.000200"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opts}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.572903" elapsed="0.000163"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opts}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.573138" elapsed="0.000151"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opts}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.573357" elapsed="0.000146"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${opts}</arg>
+<arg>add_argument</arg>
+<arg>--window-size\=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.573567" elapsed="0.000165"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2026-02-05T00:04:10.573922" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${opts}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2026-02-05T00:04:10.573808" elapsed="14.171008"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-05T00:04:24.748693" level="INFO">Opening url 'https://computing.kku.ac.th'</msg>
+<arg>https://computing.kku.ac.th</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-05T00:04:24.748112" elapsed="2.240585"/>
+</kw>
+<status status="PASS" start="2026-02-05T00:04:10.571410" elapsed="16.417617"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-05T00:04:26.998325" level="INFO">${title} = วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น - College of Computing, Khon Kaen University</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-05T00:04:26.989492" elapsed="0.008891"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>College of Computing</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-02-05T00:04:26.998609" elapsed="0.001074"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-05T00:04:26.999834" elapsed="0.085098"/>
+</kw>
+<status status="PASS" start="2026-02-05T00:04:10.570919" elapsed="16.514454"/>
+</test>
+<status status="PASS" start="2026-02-05T00:04:10.417038" elapsed="16.668760"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Lab8" id="s1" pass="1" fail="0" skip="0">Lab8</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
