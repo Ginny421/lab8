@@ -7,10 +7,12 @@ Open computing Website
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --disable-gpu
 
     Open Browser
     ...    https://www.google.com
     ...    chrome
     ...    options=${options}
+    ...    executable_path=/usr/bin/chromedriver
 
     Close Browser
